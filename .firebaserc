@@ -1,0 +1,7 @@
+{
+  "projects": {
+    "default": "sspp-staging",
+    "staging": "sspp-staging",
+    "production": "sspp"
+  }
+}
