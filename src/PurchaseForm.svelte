@@ -41,8 +41,8 @@
     card: {
       elementId: "sq-card",
       inputStyle: {
-        backgroundColor: "#efefef",
-        borderRadius: "1px",
+        backgroundColor: "#fefefe",
+        borderRadius: "2px",
         fontFamily: "futura",
         placeholderFontWeight: 200,
         details: {
@@ -182,7 +182,7 @@
           class="block ml-2 text-white text-lg opacity-75 leading-5 uppercase">
           Referring Family
         </label>
-        <div class="ml-2 text-sm text-white opactiy-75">
+        <div class="ml-2 text-sm text-white opacity-75">
           If purchasing tickets from a specific family, please enter their last
           name to credit the sale.
         </div>

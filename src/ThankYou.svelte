@@ -33,7 +33,7 @@
     <div
       class="flex-1 flex flex-col justify-center max-w-3xl mx-4 sm:mx-8 font-serif text-christmas-gold text-xl sm:text-2xl text-center uppercase tracking-widest whitespace-no-wrap">
       <div class="my-3">All Good Things,</div>
-      <div class="my-3">SS / PETER & PAUL SCHOOLS</div>
+      <div class="my-3">SS. PETER & PAUL SCHOOLS</div>
     </div>
     <picture class="flex-1">
       <source srcset="/small_right_decor.webp 1x" type="image/webp" />

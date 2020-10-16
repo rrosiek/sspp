@@ -6,8 +6,7 @@
   export let firestore;
 
   let email;
-  // let page = "welcome";
-  let page = "thank";
+  let page = "welcome";
 
   const handlePurchaseNavigate = () => {
     page = "purchase";
@@ -16,7 +15,7 @@
 
   const handlePurchaseSuccess = (event) => {
     email = event.detail.email;
-    formComplete = true;
+    page = "thankyou";
     window.scrollTo(0, 0);
   };
 </script>

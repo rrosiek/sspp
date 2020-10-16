@@ -22,5 +22,6 @@ module.exports = {
     purgeLayersByDefault: true,
     removeDeprecatedGapUtilities: true,
     standardFontWeights: true,
+    defaultLineHeights: true,
   },
 };
