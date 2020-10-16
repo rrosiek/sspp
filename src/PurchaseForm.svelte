@@ -283,7 +283,7 @@
         </div>
       </div>
       <div class="my-4 grid grid-cols-2 gap-4">
-        <div>
+        <div class="col-span-2 sm:col-span-1">
           <div class="mb-2 rounded-sm shadow-sm">
             <input
               id="email"
@@ -301,7 +301,7 @@
             Valid e-mail address is required.
           </div>
         </div>
-        <div>
+        <div class="col-span-2 sm:col-span-1">
           <div class="mb-2 rounded-sm shadow-sm">
             <input
               id="phone"

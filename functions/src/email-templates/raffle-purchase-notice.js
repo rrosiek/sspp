@@ -18,7 +18,7 @@ module.exports = (payload) => {
         ></mj-divider>
 
         <mj-text font-size="18px" color="#7f3037" font-family="sans">
-          A new raffle purchase completed.
+          New raffle purchase completed.
         </mj-text>
 
         <mj-table font-size="16px" font-family="sans">
