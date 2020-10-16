@@ -4,7 +4,7 @@
 
 {#if showDescription}
   <section
-    class="max-w-3xl mx-auto my-6 text-center leading-6 text-sm text-gray-800">
+    class="max-w-3xl mx-auto px-2 my-6 text-center leading-6 text-sm text-gray-800">
     <p>
       Tickets are just
       <span class="font-semibold">$40</span>

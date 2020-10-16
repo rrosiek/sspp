@@ -9,7 +9,7 @@
 </script>
 
 <section class="max-w-3xl mx-auto text-center text-christmas-dark-red">
-  <div class="my-6 sm:my-10 leading-8">
+  <div class="my-6 sm:my-10 px-2 leading-8">
     Thank you for supporting our school community. Together we can help our
     students, teachers, and staff achieve greatness today, tomorrow, and in the
     days to come.
@@ -25,7 +25,7 @@
 
 <section class="container mx-auto my-6 sm:my-10">
   <div class="flex">
-    <picture class="flex-1">
+    <picture class="hidden sm:flex-1">
       <source srcset="/large_left_decor.webp 1x" type="image/webp" />
       <source srcset="/large_left_decor.png 1x" type="image/png" />
       <img
@@ -90,7 +90,7 @@
         </button>
       </div>
     </div>
-    <picture class="flex-1">
+    <picture class="hidden sm:flex-1">
       <source srcset="/large_right_decor.webp 1x" type="image/webp" />
       <source srcset="/large_right_decor.png 1x" type="image/png" />
       <img

@@ -222,7 +222,7 @@
         </div>
       </div>
       <div class="my-4 grid grid-cols-6 gap-4">
-        <div class="col-span-3">
+        <div class="col-span-6 sm:col-span-3">
           <div class="mb-2 rounded-sm shadow-sm">
             <input
               id="city"
@@ -239,7 +239,7 @@
             Your city is required.
           </div>
         </div>
-        <div class="col-span-2">
+        <div class="col-span-3 sm:col-span-2">
           <div class="mb-2 rounded-sm shadow-sm">
             <select
               id="state"
@@ -262,7 +262,7 @@
             State is required.
           </div>
         </div>
-        <div>
+        <div class="col-span-3 sm:col-span-1">
           <div class="mb-2 rounded-sm shadow-sm">
             <input
               id="zipCode"
@@ -321,16 +321,16 @@
           </div>
         </div>
       </div>
-      <div class="flex justify-between items-center mt-4 sm:mt-8 mb-2 sm:mb-4">
+      <div class="flex justify-between items-center mt-8 mb-2 sm:mb-4">
         <h3 class="text-white text-xl opacity-75 leading-5 uppercase">
           Billing
         </h3>
-        <div class="text-sm">
+        <div class="text-sm text-white opacity-75">
           Processing by
           <a
             href="https://squareup.com"
             target="_blank"
-            class="text-green-800 hover:text-green-500">Square</a>
+            class="text-green-800 hover:text-green-500 opacity-75">Square</a>
         </div>
       </div>
       <div id="sq-card" />
@@ -344,7 +344,9 @@
           name="ccDonate"
           type="checkbox"
           class="form-checkbox h-6 w-6 text-green-600 transition duration-150 ease-in-out" />
-        <label for="donate" class="ml-2 block text-lg text-white opacity-75">
+        <label
+          for="donate"
+          class="ml-2 block text-sm sm:text-lg text-white opacity-75">
           Donate
           <span class="font-bold">$2.00</span>
           to help cover credit card processing charges.
@@ -353,7 +355,7 @@
     </div>
   </section>
 
-  <div class="max-w-lg mx-auto">
+  <div class="max-w-lg mx-auto px-2">
     {#if !loading}
       <button
         type="submit"

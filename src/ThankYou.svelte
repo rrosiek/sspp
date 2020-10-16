@@ -8,7 +8,7 @@
 </svelte:head>
 
 <section
-  class="max-w-3xl mx-auto mt-6 sm:mt-10 font-semibold text-center text-christmas-dark-red">
+  class="max-w-3xl mx-auto mt-6 sm:mt-10 px-2 font-semibold text-center text-christmas-dark-red">
   <div class="my-2 text-xl md:text-2xl tracking-widest uppercase">
     Thank you for your purchase!
   </div>
@@ -22,7 +22,7 @@
 
 <section class="container mx-auto my-6 sm:my-10">
   <div class="flex">
-    <picture class="flex-1">
+    <picture class="hidden sm:flex-1">
       <source srcset="/small_left_decor.webp 1x" type="image/webp" />
       <source srcset="/small_left_decor.png 1x" type="image/png" />
       <img
@@ -35,7 +35,7 @@
       <div class="my-3">All Good Things,</div>
       <div class="my-3">SS. PETER & PAUL SCHOOLS</div>
     </div>
-    <picture class="flex-1">
+    <picture class="hidden sm:flex-1">
       <source srcset="/small_right_decor.webp 1x" type="image/webp" />
       <source srcset="/small_right_decor.png 1x" type="image/png" />
       <img
