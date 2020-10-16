@@ -6,17 +6,18 @@
   export let firestore;
 
   let email;
-  let page = "welcome";
+  // let page = "welcome";
+  let page = "thank";
 
   const handlePurchaseNavigate = () => {
     page = "purchase";
-    window.scrollTop(0);
+    window.scrollTo(0, 0);
   };
 
   const handlePurchaseSuccess = (event) => {
     email = event.detail.email;
     formComplete = true;
-    window.scrollTop(0);
+    window.scrollTo(0, 0);
   };
 </script>
 
@@ -44,8 +45,6 @@
   {:else if page === 'purchase'}
     <PurchaseForm {firestore} on:purchaseSuccess={handlePurchaseSuccess} />
   {:else}
-    <section class="max-w-xl mx-auto">
-      <ThankYou {email} />
-    </section>
+    <ThankYou {email} />
   {/if}
 </main>

@@ -33,7 +33,7 @@
         alt="Left side holly decor"
         title="Left Decor" />
     </picture>
-    <div class="flex-1 flex flex-col justify-evenly mx-w-2xl mx-4 sm:mx-8">
+    <div class="flex-1 flex flex-col justify-evenly mx-4 sm:mx-8">
       <div class="flex justify-center items-center h-24 my-6">
         <div
           class="absolute text-christmas-gold font-serif font-extrabold tracking-wider opacity-20">
@@ -85,7 +85,7 @@
       <div class="mx-auto">
         <button
           on:click={handleBuy}
-          class="inline-flex items-center my-6 px-4 py-2 font-serif text-2xl font-semibold text-christmas-gold bg-christmas-red uppercase tracking-wider">
+          class="inline-flex items-center my-6 px-4 py-3 shadow font-serif text-2xl font-semibold text-christmas-gold bg-christmas-red hover:bg-red-600 uppercase tracking-widerhover:bg-red-500 focus:outline-none focus:border-red-700 focus:shadow-outline-red active:bg-red-700 transition ease-in-out duration-150">
           Buy Tickets Now!
         </button>
       </div>
