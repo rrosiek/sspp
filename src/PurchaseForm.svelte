@@ -3,6 +3,7 @@
   import * as yup from "yup";
 
   import Form from "./components/Form.svelte";
+  import Footer from "./components/Footer.svelte";
   import states from "./states";
 
   export let firestore;
@@ -90,6 +91,14 @@
 <svelte:head>
   <title>SSPP Cash Raffle :: Purchase Tickets</title>
 </svelte:head>
+
+<section class="max-w-3xl mx-auto text-center text-christmas-dark-red">
+  <div class="my-6 sm:my-10 leading-8">
+    Thank you for supporting our school community. Together we can help our
+    students, teachers, and staff achieve greatness today, tomorrow, and in the
+    days to come.
+  </div>
+</section>
 
 <Form on:validated={handleSubmit} {schema} let:hasError>
   <div class="my-4">
@@ -341,3 +350,5 @@
     {/if}
   </div>
 </Form>
+
+<Footer />
