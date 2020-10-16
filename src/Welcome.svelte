@@ -25,7 +25,7 @@
 
 <section class="container mx-auto my-6 sm:my-10">
   <div class="flex">
-    <picture class="hidden sm:flex-1">
+    <picture class="hidden sm:block flex-1">
       <source srcset="/large_left_decor.webp 1x" type="image/webp" />
       <source srcset="/large_left_decor.png 1x" type="image/png" />
       <img
@@ -90,7 +90,7 @@
         </button>
       </div>
     </div>
-    <picture class="hidden sm:flex-1">
+    <picture class="hidden sm:block flex-1">
       <source srcset="/large_right_decor.webp 1x" type="image/webp" />
       <source srcset="/large_right_decor.png 1x" type="image/png" />
       <img
