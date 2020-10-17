@@ -33,7 +33,7 @@
     state: yup.mixed().oneOf(states.map((s) => s.value)),
     zipCode: yup.string().matches(/[0-9]{5}/),
     email: yup.string().required().email(),
-    phone: yup.string().matches(/[0-9]{3}-[0-9]{3}-[0-9]{4}/),
+    phone: yup.string().matches(/^\(?[0-9]{3}\)?-?\s?[0-9]{3}-?[0-9]{4}$/),
   });
 
   const paymentForm = new SqPaymentForm({
