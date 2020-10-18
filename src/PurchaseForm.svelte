@@ -63,7 +63,7 @@
 
         await firestore.collection("raffle_purchases").add({
           address: purchasePayload.address,
-          ccDonate: purchasePayload.ccDonate === "on",
+          ccDonate: ccDonate,
           city: purchasePayload.city,
           email: purchasePayload.email,
           name: purchasePayload.name,
@@ -122,8 +122,8 @@
       <div class="max-w-xl mx-auto">
         <div class="flex items-start">
           <button
-            on:click={handleTicketIncrease}
-            class="flex-shrink inline-flex justify-center items-center py-3 px-8 bg-green-600 hover:bg-green-500 focus:outline-none focus:border-green-700 focus:shadow-outline-green active:bg-green-700 transition ease-in-out duration-150 rounded-md shadow-md"
+            on:click={handleTicketDecrease}
+            class="inline-flex justify-center items-center py-3 px-8 bg-green-600 hover:bg-green-500 focus:outline-none focus:border-green-700 focus:shadow-outline-indigo active:bg-green-700 transition ease-in-out duration-150 rounded-md shadow-md"
             type="button"><svg
               class="w-8 h-8 text-gray-100"
               fill="none"
@@ -133,7 +133,7 @@
                 stroke-linecap="round"
                 stroke-linejoin="round"
                 stroke-width="2"
-                d="M12 6v6m0 0v6m0-6h6m-6 0H6" /></svg></button>
+                d="M20 12H4" /></svg></button>
           <div class="flex-1 mx-4 sm:mx-6">
             <div class="mb-2 rounded-sm shadow-sm">
               <input
@@ -156,8 +156,8 @@
             </div>
           </div>
           <button
-            on:click={handleTicketDecrease}
-            class="inline-flex justify-center items-center py-3 px-8 bg-green-600 hover:bg-green-500 focus:outline-none focus:border-green-700 focus:shadow-outline-indigo active:bg-green-700 transition ease-in-out duration-150 rounded-md shadow-md"
+            on:click={handleTicketIncrease}
+            class="flex-shrink inline-flex justify-center items-center py-3 px-8 bg-green-600 hover:bg-green-500 focus:outline-none focus:border-green-700 focus:shadow-outline-green active:bg-green-700 transition ease-in-out duration-150 rounded-md shadow-md"
             type="button"><svg
               class="w-8 h-8 text-gray-100"
               fill="none"
@@ -167,7 +167,7 @@
                 stroke-linecap="round"
                 stroke-linejoin="round"
                 stroke-width="2"
-                d="M20 12H4" /></svg></button>
+                d="M12 6v6m0 0v6m0-6h6m-6 0H6" /></svg></button>
         </div>
       </div>
       <div class="my-4">

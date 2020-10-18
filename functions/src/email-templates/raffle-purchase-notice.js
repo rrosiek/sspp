@@ -9,7 +9,7 @@ module.exports = (payload) => {
         <mj-image
           padding="0px 10px 10px 10px"
           container-background-color="#ce2f36"
-          src="https://firebasestorage.googleapis.com/v0/b/sspp-staging.appspot.com/o/static%2Fchristmas_raffle_logo.png?alt=media&token=7a065a76-7381-4e9a-ba60-879c63fe3476"
+          src="https://firebasestorage.googleapis.com/v0/b/sspp-production.appspot.com/o/static%2Fchristmas_raffle_logo.png?alt=media&token=6f7ad80d-d10d-467f-b2a0-5dab7b4aa89a"
         ></mj-image>
 
         <mj-divider
