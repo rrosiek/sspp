@@ -63,7 +63,7 @@
 
         await firestore.collection("raffle_purchases").add({
           address: purchasePayload.address,
-          ccDonate: ccDonate,
+          ccDonate,
           city: purchasePayload.city,
           email: purchasePayload.email,
           name: purchasePayload.name,

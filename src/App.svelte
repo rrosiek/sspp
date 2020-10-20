@@ -8,6 +8,8 @@
   let email;
   let page = "welcome";
 
+  const squareEndpointUrl = __sspp.env.SQUARE_PAYMENT_ENDPOINT;
+
   const handlePurchaseNavigate = () => {
     page = "purchase";
     window.scrollTo(0, 0);
@@ -19,6 +21,11 @@
     window.scrollTo(0, 0);
   };
 </script>
+
+<svelte:head>
+  <script type="text/javascript" src={squareEndpointUrl}>
+  </script>
+</svelte:head>
 
 <main>
   <header class="mb-2 px-4 bg-christmas-red">
