@@ -9,7 +9,7 @@
   export let firestore;
 
   const dispatch = createEventDispatcher();
-  const ticketCost = 4000;
+  const ticketCost = 5000;
   let cardError = false;
   let ccDonate = false;
   let loading = false;

@@ -7,7 +7,7 @@
     class="max-w-3xl mx-auto px-2 my-6 text-center leading-6 text-sm text-gray-800">
     <p>
       Tickets are just
-      <span class="font-semibold">$40</span>
+      <span class="font-semibold">$50</span>
       each. You can also stop in St. Peter & Paul Rectory to purchase tickets
       with cash or check, or purchase tickets from a St. Peter and Paul family.
       Checks should be made out to
@@ -16,7 +16,7 @@
     <p>Each ticket is good for one entry into the sweepstakes.</p>
     <p>
       The drawings will be held on
-      <span class="font-semibold">December 5, 2020.</span>
+      <span class="font-semibold">December 5, 2021.</span>
     </p>
     <p>All rewards will be paid out by check.</p>
   </section>

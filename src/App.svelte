@@ -1,15 +1,15 @@
 <script>
-  // import PurchaseForm from "./PurchaseForm.svelte";
-  // import ThankYou from "./ThankYou.svelte";
+  import PurchaseForm from "./PurchaseForm.svelte";
+  import ThankYou from "./ThankYou.svelte";
   import ThankYouYearEnd from "./ThankYouYearEnd.svelte";
-  // import Welcome from "./Welcome.svelte";
+  import Welcome from "./Welcome.svelte";
 
   export let firestore;
 
-  // let email;
-  let page = "yearend";
+  let email;
+  //let page = "yearend";
+  let page = "welcome";
 
-  /*
   const squareEndpointUrl = __sspp.env.SQUARE_PAYMENT_ENDPOINT;
 
   const handlePurchaseNavigate = () => {
@@ -22,12 +22,10 @@
     page = "thankyou";
     window.scrollTo(0, 0);
   };
-  */
 </script>
 
 <svelte:head>
-  <!--<script type="text/javascript" src={squareEndpointUrl}> -->
-  <!-- </script>-->
+  <script type="text/javascript" src={squareEndpointUrl}></script>
 </svelte:head>
 
 <main>
@@ -50,13 +48,11 @@
   </header>
   <div class="h-2 bg-christmas-gold" />
   {#if page === 'welcome'}
-    <!-- <Welcome on:buyTickets={handlePurchaseNavigate} /> -->
-    <div />
+    <Welcome on:buyTickets={handlePurchaseNavigate} />
   {:else if page === 'purchase'}
-    <!-- <PurchaseForm {firestore} on:purchaseSuccess={handlePurchaseSuccess} /> -->
-    <div />
+    <PurchaseForm {firestore} on:purchaseSuccess={handlePurchaseSuccess} />
   {:else}
-    <!-- <ThankYou {email} /> -->
-    <ThankYouYearEnd />
+    <ThankYou {email} />
+    <!--<ThankYouYearEnd /> -->
   {/if}
 </main>

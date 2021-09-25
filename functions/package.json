@@ -8,7 +8,7 @@
     "logs": "firebase functions:log"
   },
   "engines": {
-    "node": "10"
+    "node": "12"
   },
   "dependencies": {
     "aws-sdk": "^2.773.0",
@@ -19,7 +19,7 @@
     "square-connect": "^4.20200923.4"
   },
   "devDependencies": {
-    "firebase-functions-test": "^0.2.0"
+    "firebase-functions-test": "^0.3.2"
   },
   "private": true
 }
