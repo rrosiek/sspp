@@ -11,7 +11,7 @@
       each. You can also stop in St. Peter & Paul Rectory to purchase tickets
       with cash or check, or purchase tickets from a St. Peter and Paul family.
       Checks should be made out to
-      <span class="font-semibold">SSPP Parents Guild</span>.
+      <span class="font-semibold">SSPP Game of Chance</span>.
     </p>
     <p>Each ticket is good for one entry into the sweepstakes.</p>
     <p>
