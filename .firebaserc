@@ -2,6 +2,7 @@
   "projects": {
     "default": "sspp-staging",
     "staging": "sspp-staging",
-    "production": "sspp-production"
+    "production": "sspp-production",
+    "emulator": "demo-divvyd"
   }
 }

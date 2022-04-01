@@ -8,15 +8,15 @@
     "logs": "firebase functions:log"
   },
   "engines": {
-    "node": "12"
+    "node": "16"
   },
   "dependencies": {
     "aws-sdk": "^2.773.0",
     "crypto": "^1.0.1",
-    "firebase-admin": "^9.2.0",
+    "firebase-admin": "^10.0.0",
     "firebase-functions": "^3.6.1",
     "mjml": "^4.7.1",
-    "square-connect": "^4.20200923.4"
+    "square-connect": "^6.2"
   },
   "devDependencies": {
     "firebase-functions-test": "^0.3.2"
