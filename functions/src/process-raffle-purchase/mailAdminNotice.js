@@ -20,13 +20,12 @@ module.exports = async (purchaseId, purchase, squareCharge) => {
   const html = emailTemplate({
     address: `${purchase.address} ${purchase.city}, ${purchase.state} ${purchase.zipCode}`,
     amount: moneyFormatter.format(
-      squareCharge.payment.amount_money.amount / 100
+      Number(squareCharge.payment.amountMoney.amount) / 100
     ),
     email: purchase.email,
     id: purchaseId,
     name: purchase.name,
     phone: purchase.phone,
-    referringFamily: purchase.referringFamily,
     ticketsPurchased: purchase.ticketsPurchased,
   }).html;
 

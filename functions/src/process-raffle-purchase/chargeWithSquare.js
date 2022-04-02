@@ -1,49 +1,55 @@
 const functions = require("firebase-functions");
 const crypto = require("crypto");
-const SquareConnect = require("square-connect");
+const { ApiError, Client, Environment } = require("square");
 
 module.exports = async (purchaseSnap) => {
-  let response;
   const idempotencyKey = crypto.randomBytes(22).toString("hex");
   const purchase = purchaseSnap.data();
   const squareAccessToken = functions.config().square.token;
-  const squareBasePath = functions.config().square.base_path;
-  const squareClient = SquareConnect.ApiClient.instance;
-  const squareOauth2 = squareClient.authentications["oauth2"];
+  const squareEnv = functions.config().square.env;
   const ticketCost = functions.config().raffle.ticket_cost;
 
-  squareClient.basePath = squareBasePath;
-  squareOauth2.accessToken = squareAccessToken;
-
-  const paymentsApi = new SquareConnect.PaymentsApi();
+  const squareClient = new Client({
+    environment:
+      squareEnv === "sandbox" ? Environment.Sandbox : Environment.Production,
+    accessToken: squareAccessToken,
+  });
 
   const amount =
-    purchase.ticketsPurchased * ticketCost + (purchase.ccDonate ? 200 : 0);
+    purchase.ticketsPurchased * ticketCost +
+    (purchase.ccDonate ? 200 : 0) -
+    (purchase.ticketsPurchased === 8 ? 500 : 0);
 
-  const payload = {
-    source_id: purchase.squarePurchase.nonce,
-    amount_money: {
+  const payment = {
+    idempotencyKey,
+    sourceId: purchase.squarePurchase.sourceId,
+    locationId: purchase.squarePurchase.locationId,
+    amountMoney: {
       amount,
       currency: "USD",
     },
-    idempotency_key: idempotencyKey,
-    buyer_email_address: purchase.email,
+    buyerEmailAddress: purchase.email,
   };
 
   try {
-    response = await paymentsApi.createPayment(payload);
-  } catch (error) {
-    console.error(error.response.text);
+    const { request, result, statusCode } =
+      await squareClient.paymentsApi.createPayment(payment);
 
-    throw error;
+    console.info(`Square status response: ${statusCode}`);
+
+    await purchaseSnap.ref.update({
+      createdAt: new Date(),
+      squarePurchase: result,
+    });
+
+    return result;
+  } catch (err) {
+    if (err instanceof ApiError) {
+      console.error(err.result);
+    } else {
+      console.error(err);
+    }
+
+    throw err;
   }
-
-  const tempResp = JSON.stringify(response);
-
-  await purchaseSnap.ref.update({
-    createdAt: new Date(),
-    squarePurchase: JSON.parse(tempResp),
-  });
-
-  return JSON.parse(tempResp);
 };

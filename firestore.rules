@@ -19,6 +19,7 @@ service cloud.firestore {
         "ccDonate",
         "city",
         "email",
+        "event",
         "name",
         "phone",
         "referringFamily",
@@ -34,6 +35,8 @@ service cloud.firestore {
       strSizeBetween("city", 3, 250) &&
       incomingData().email is string &&
       strSizeBetween("email", 3, 250) &&
+      incomingData().event is string &&
+      strSizeBetween("event", 3, 250) &&
       incomingData().name is string &&
       strSizeBetween("name", 3, 250) &&
       incomingData().phone is string &&

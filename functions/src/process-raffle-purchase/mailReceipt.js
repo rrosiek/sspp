@@ -20,14 +20,13 @@ module.exports = async (purchaseId, purchase, squareCharge) => {
   const html = emailTemplate({
     address: `${purchase.address} ${purchase.city}, ${purchase.state} ${purchase.zipCode}`,
     amount: moneyFormatter.format(
-      squareCharge.payment.amount_money.amount / 100
+      Number(squareCharge.payment.amountMoney.amount) / 100
     ),
-    chargedTo: `${squareCharge.payment.card_details.card.card_brand} ending in ${squareCharge.payment.card_details.card.last_4}`,
+    chargedTo: `${squareCharge.payment.cardDetails.card.cardBrand} ending in ${squareCharge.payment.cardDetails.card.last4}`,
     email: purchase.email,
     id: purchaseId,
     name: purchase.name,
     phone: purchase.phone,
-    referringFamily: purchase.referringFamily,
     ticketsPurchased: purchase.ticketsPurchased,
   }).html;
 
@@ -39,7 +38,7 @@ module.exports = async (purchaseId, purchase, squareCharge) => {
         Body: { Html: { Charset: "UTF-8", Data: html } },
         Subject: {
           Charset: "UTF-8",
-          Data: "SSPP Christmas Raffle Purchase Confirmation",
+          Data: "SSPP Meat Raffle Purchase Confirmation",
         },
       },
     })

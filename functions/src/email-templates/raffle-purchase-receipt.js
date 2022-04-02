@@ -6,32 +6,25 @@ module.exports = (payload) => {
   <mj-body>
     <mj-section>
       <mj-column>
-        <mj-image
-          padding="0px 10px 10px 10px"
-          container-background-color="#ce2f36"
-          src="https://firebasestorage.googleapis.com/v0/b/sspp-staging.appspot.com/o/static%2Fchristmas_raffle_logo.png?alt=media&token=7a065a76-7381-4e9a-ba60-879c63fe3476"
-        ></mj-image>
-
+        <mj-text color="#1c462c" font-size="28px" align="center">
+          SS. Peter & Paul Meat Raffle
+        </mj-text>
+        
         <mj-divider
-          border-color="#cb9e61"
+          border-color="#1c462c"
           padding="10px 0px 20px 0px"
         ></mj-divider>
 
-        <mj-text
-          font-size="22px"
-          color="#7f3037"
-          font-family="sans"
-          align="center"
-        >
+        <mj-text font-size="22px" align="center">
           Thank you for your purchase!
         </mj-text>
 
-        <mj-text font-size="18px" color="#7f3037" font-family="sans">
+        <mj-text font-size="18px">
           Your raffle purchase is complete! Below is your purchase information
-          for your records. The drawing will be December 5th. Good luck!
+          for your records. We'll see you at the raffle on April 29th!
         </mj-text>
 
-        <mj-table font-size="16px" font-family="sans">
+        <mj-table font-size="16px">
           <tr>
             <td style="text-align: right">Tickts Purchased:</td>
             <td style="padding: 2px 15px;">${payload.ticketsPurchased}</td>
@@ -53,10 +46,6 @@ module.exports = (payload) => {
             <td style="padding: 2px 15px;">${payload.phone}</td>
           </tr>
           <tr>
-            <td style="text-align: right">Referring Family:</td>
-            <td style="padding: 12px 15px;">${payload.referringFamily}</td>
-          </tr>
-          <tr>
             <td style="text-align: right">Total:</td>
             <td style="padding: 2px 15px;">${payload.amount}</td>
           </tr>
@@ -70,7 +59,7 @@ module.exports = (payload) => {
           </tr>
         </mj-table>
 
-        <mj-text font-size="18px" color="#7f3037" font-family="sans">
+        <mj-text font-size="18px">
           Any questions or concerns, please contact Melissa D'Arcangelo at
           darcanm@amazon.com.
         </mj-text>
@@ -83,7 +72,6 @@ module.exports = (payload) => {
         <mj-text
           padding="0px 10px"
           font-size="12px"
-          color="#7f3037"
           font-family="sans"
           align="center"
         >
@@ -93,7 +81,6 @@ module.exports = (payload) => {
         <mj-text
           padding="6px 10px"
           font-size="12px"
-          color="#7f3037"
           font-family="sans"
           align="center"
         >
@@ -103,7 +90,6 @@ module.exports = (payload) => {
         <mj-text
           padding="0px 10px"
           font-size="12px"
-          color="#7f3037"
           font-family="sans"
           align="center"
         >
