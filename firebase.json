@@ -4,7 +4,7 @@
     "indexes": "firestore.indexes.json"
   },
   "hosting": {
-    "public": "public",
+    "public": "meat-raffle/build",
     "ignore": ["firebase.json", "**/.*", "**/node_modules/**"]
   },
   "storage": {

@@ -3,8 +3,8 @@
   "version": "0.0.1",
   "scripts": {
     "dev": "svelte-kit dev",
-    "build": "svelte-kit build",
-    "build:stage": "svelte-kit build --mode staging",
+    "build": "export MODE=production && svelte-kit build",
+    "build:stage": "export MODE=staging && svelte-kit build",
     "package": "svelte-kit package",
     "preview": "svelte-kit preview",
     "prepare": "svelte-kit sync",

@@ -2,9 +2,6 @@
   import { initFirebase } from "$lib/firebase";
   import "../app.css";
 
-  const squareEndpointUrl = import.meta.env
-    .VITE_SQUARE_PAYMENT_ENDPOINT as string;
-
   initFirebase({
     apiKey: import.meta.env.VITE_FIREBASE_API_KEY as string,
     authDomain: import.meta.env.VITE_FIREBASE_AUTH_DOMAIN as string,
@@ -16,9 +13,5 @@
     measurementId: import.meta.env.VITE_FIREBASE_MEASUREMENT_ID as string,
   });
 </script>
-
-<svelte:head>
-  <script type="text/javascript" src={squareEndpointUrl}></script>
-</svelte:head>
 
 <slot />

@@ -138,6 +138,8 @@
       Purchase Tickets
     </div>
   </div>
+
+  <!-- <div class="text-center text-xl">Online sales available soon!</div> -->
   <Form on:validated={handleSubmit} {schema} let:hasError>
     <div class="max-w-3xl mx-auto">
       <div class="max-w-xl mx-auto">

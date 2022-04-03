@@ -1,4 +1,10 @@
-<header>
+<script lang="ts">
+  import { dev } from "$app/env";
+
+  const bgImg = dev ? "texture_bg.jpg" : "/texture_bg.jpg";
+</script>
+
+<header style="background-image: url('{bgImg}')">
   <div class="max-w-6xl mx-auto p-4 xl:w-2/3 flex flex-col items-center">
     <picture>
       <source srcset="/sspp_logo.webp 1x" type="image/webp" />
@@ -9,7 +15,7 @@
         title="SSPP Logo"
       />
     </picture>
-    <div class="font-display font-medium text-4xl text-mr-gold">
+    <div class="font-display font-medium text-center text-4xl text-mr-gold">
       You're invited to a very special
     </div>
     <picture>
@@ -26,7 +32,6 @@
 
 <style>
   header {
-    background-image: url("texture_bg.jpg");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
