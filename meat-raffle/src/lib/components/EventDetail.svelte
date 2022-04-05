@@ -16,7 +16,7 @@
     <div class="text-3xl text-center mb-1">
       Saints Peter & Paul School Gymnasium
     </div>
-    <div class="text-3xl text-center">68 E. Main St., Hamburg, NY 14057</div>
+    <div class="text-3xl text-center">68 E. Main St., Hamburg, NY 14075</div>
     <div
       class="max-w-4xl mx-auto grid grid-cols-1 lg:grid-cols-2 divide-y-4 lg:divide-y-0 lg:divide-x-4 divide-mr-gold my-6"
     >
